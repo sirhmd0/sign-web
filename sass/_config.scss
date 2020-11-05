@@ -1,0 +1,75 @@
+// Colors
+
+$primary: #4065C3;
+$secondary: #65C340;
+$dark: #131211;
+$light: #fefefe;
+
+@function set-color($color) {
+  @if (lightness($color) < 58) {
+    @return $light;
+  } @else {
+    @return $dark;
+  }
+}
+
+@mixin set-bg($color) {
+  background: $color;
+  color: set-color($color);
+  border-color: set-color($color);
+  a {
+    color: set-color($color);
+  }
+}
+
+// Flex and Grid
+
+@mixin set-flex($flex-ai, $flex-jc, $flex-d) {
+  display: flex;
+  align-items: $flex-ai;
+  justify-content: $flex-jc;
+  flex-direction: $flex-d;
+}
+
+// Grid
+
+@mixin set-grid($grid-col, $grid-row, $gap) {
+  display: grid;
+  @if ($grid-row == null) {
+    grid-template-columns: repeat($grid-col, 1fr);
+  } @else if($grid-col == null) {
+    grid-template-rows: repeat($grid-col, 1fr);
+  }
+  grid-gap: $gap;
+}
+
+// Set  Distances and Font Size
+
+@function set-size($size) {
+  @return ($size * 1rem);
+}
+
+// Font Size
+
+$small: set-size(0.8);
+$lead: set-size(1);
+$title: set-size(1.4);
+$subtitle: set-size(2);
+$headtitle: set-size(3.4);
+
+// Set Font Weight
+
+@function set-weight($weight) {
+  @return ($weight * 100);
+}
+
+$thin: set-weight(3);
+$regular: set-weight(4);
+$normal: set-weight(5);
+$semi-bold: set-weight(6);
+$bold: set-weight(7);
+$black: set-weight(8);
+
+// Transition
+
+$transition: all 400ms ease-in;

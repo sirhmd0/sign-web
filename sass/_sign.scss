@@ -1,0 +1,31 @@
+.sign {
+  height: calc(100vh - 80px);
+  @include set-flex(center, center, column);
+
+  &-title {
+    width: 100%;
+    text-align: center;
+    font-size: $subtitle;
+    text-transform: uppercase;
+    margin-bottom: set-size(2);
+  }
+
+  &-form {
+    @include set-grid(1, null, set-size(1));
+    width: 100%;
+  }
+
+  &-input {
+    // @include set-bg(null);
+    font-size: $small;
+    font-weight: $semi-bold;
+    padding: set-size(1) set-size(1.2);
+     border: 1px solid ;
+    transition: $transition;
+
+  }
+
+  &-btn {
+    text-align: center;
+  }
+}

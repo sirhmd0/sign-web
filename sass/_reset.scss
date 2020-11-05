@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //font-size: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.6;
+  @include set-bg($dark);
+}
+
+.mode-toggle {
+  @include set-bg($light);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.btn {
+  @include set-bg($light);
+  @include set-flex(center, center, null);
+  font-size: $small;
+  font-weight: $semi-bold;
+  text-transform: uppercase;
+  padding: set-size(1) set-size(1.2);
+  transition: $transition;
+
+  &.btn-primary {
+    @include set-bg($primary);
+  }
+
+  &.btn-secondary {
+    @include set-bg($secondary);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-switch {
+  position: fixed;
+  right: set-size(1);
+  bottom: set-size(1);
+  font-weight: $semi-bold;
+  font-size: set-size(0.8);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+@media (min-width:786px) {
+  html {
+    font-size: 18px;
+  }
+
+  .container {
+    width: 60%;
+  }
+}
+
+@media (min-width:960px) {
+  html {
+    font-size: 20px;
+  }
+
+  .container {
+    width: 40%;
+  }
+}

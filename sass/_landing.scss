@@ -1,0 +1,23 @@
+.landing {
+  height: calc(100vh - 80px);
+  @include set-flex(center, center, column);
+  text-align: center;
+
+  &-title {
+    font-size: $headtitle;
+    font-weight: $black;
+    text-transform: uppercase;
+  }
+
+  &-subtitle {
+    font-size: $title;
+    font-weight: $semi-bold;
+    text-transform: uppercase;
+  }
+
+  &-buttons {
+    width: 100%;
+    margin-top: set-size(2);
+    @include set-grid(2, null, set-size(1));
+  }
+}

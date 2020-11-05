@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.6;
+  background: #131211;
+  color: #fefefe;
+  border-color: #fefefe;
+}
+body a {
+  color: #fefefe;
+}
+
+.mode-toggle {
+  background: #fefefe;
+  color: #131211;
+  border-color: #131211;
+}
+.mode-toggle a {
+  color: #131211;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.btn {
+  background: #fefefe;
+  color: #131211;
+  border-color: #131211;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1rem 1.2rem;
+  transition: all 400ms ease-in;
+}
+.btn a {
+  color: #131211;
+}
+.btn.btn-primary {
+  background: #4065C3;
+  color: #fefefe;
+  border-color: #fefefe;
+}
+.btn.btn-primary a {
+  color: #fefefe;
+}
+.btn.btn-secondary {
+  background: #65C340;
+  color: #fefefe;
+  border-color: #fefefe;
+}
+.btn.btn-secondary a {
+  color: #fefefe;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-switch {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+@media (min-width: 786px) {
+  html {
+    font-size: 18px;
+  }
+
+  .container {
+    width: 60%;
+  }
+}
+@media (min-width: 960px) {
+  html {
+    font-size: 20px;
+  }
+
+  .container {
+    width: 40%;
+  }
+}
+.nav {
+  background: #131211;
+  color: #fefefe;
+  border-color: #fefefe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 999;
+}
+.nav a {
+  color: #fefefe;
+}
+.nav.mode-toggle {
+  background: #fefefe;
+  color: #131211;
+  border-color: #131211;
+}
+.nav.mode-toggle a {
+  color: #131211;
+}
+.nav-logo h3 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  width: 6rem;
+  text-align: center;
+}
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.nav-menu ul a {
+  width: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: all 400ms ease-in;
+}
+.nav-menu ul a:hover {
+  color: #65C340;
+}
+
+@media (min-width: 786px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 3rem;
+  }
+}
+.landing {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.landing-title {
+  font-size: 3.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.landing-subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.landing-buttons {
+  width: 100%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.sign {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.sign-title {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.sign-form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+  width: 100%;
+}
+.sign-input {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 1rem 1.2rem;
+  border: 1px solid;
+  transition: all 400ms ease-in;
+}
+.sign-btn {
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

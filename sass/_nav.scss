@@ -1,0 +1,50 @@
+.nav {
+  @include set-bg($dark);
+  @include set-flex(center, center, column);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 999;
+
+  &.mode-toggle{
+    @include set-bg($light)
+  }
+  &-logo {
+    h3 {
+      font-size: $title;
+      text-transform: uppercase;
+      font-weight: $black;
+      width: set-size(6);
+      text-align: center;
+    }
+  }
+
+  &-menu {
+    ul {
+      @include set-flex(center, center, row);
+
+      a {
+        width: set-size(5);
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: $semi-bold;
+        font-size: $small;
+        transition: $transition;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:786px) {
+
+    .nav{
+        @include set-flex(center,space-between,row);
+        padding: 0 set-size(3);
+    } 
+}
